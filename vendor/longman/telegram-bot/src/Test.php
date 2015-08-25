@@ -151,7 +151,7 @@ class Test
             $data['chat_id'] = $chat_id; 
             $data['reply_to_message_id'] = $message_id;
             $data['text'] = 'No existe el fichero de test ' . $message->getFrom()->getFirstName();
-            return  null;
+            return  $data;
         }
         
     }
