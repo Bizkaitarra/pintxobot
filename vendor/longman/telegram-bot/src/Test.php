@@ -153,6 +153,7 @@ class Test
     }
     
     public function obtenerPreguntaAleatoria($tema) {
+        $preguntaMostrar = array(); 
         $nombreFichero = BASE_PATH.'/'.$tema.'txt';
         if (file_exists($nombreFichero)) {
             
@@ -165,7 +166,7 @@ class Test
             }
             fclose($file);                        
             $preguntaNumero = rand(0, count($preguntas)-1);      
-            $preguntaMostrar = array();            
+                       
             $separador1 = '©-«';
             $preguntaArr1 = explode($separador1,$preguntas[$preguntaNumero]);
             if (count($preguntaArr1)!=2) {
@@ -178,7 +179,8 @@ class Test
             $preguntaArr2 = explode($separador2,$preguntaArr1[1]);
             if (count($preguntaArr2)!=2) {
                 $preguntaMostrar['pregunta'] = 'Error 2';
-                $preguntaMostrar['s'] = 'ok';       
+                $preguntaMostrar['s'] = 'ok';   
+                return $preguntaMostrar;
                 //return null;
             }
             $preguntaMostrar['pregunta'] = $preguntaArr2[0];
