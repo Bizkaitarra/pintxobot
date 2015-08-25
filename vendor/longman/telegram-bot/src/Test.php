@@ -154,7 +154,7 @@ class Test
     
     public function obtenerPreguntaAleatoria($tema) {
         $preguntaMostrar = array(); 
-        $nombreFichero = BASE_PATH.'/'.$tema.'txt';
+        $nombreFichero = BASE_PATH.'/'.$tema.'.txt';
         if (file_exists($nombreFichero)) {
             
             $preguntas = array();
@@ -169,27 +169,19 @@ class Test
                        
             $separador1 = '©-«';
             $preguntaArr1 = explode($separador1,$preguntas[$preguntaNumero]);
-            if (count($preguntaArr1)!=2) {
-                $preguntaMostrar['pregunta'] = 'Error 1';
-                $preguntaMostrar['s'] = 'ok';       
-                return $preguntaMostrar;
-                //return null;
+            if (count($preguntaArr1)!=2) {                
+                return null;
             }
             $separador2 = '*';
             $preguntaArr2 = explode($separador2,$preguntaArr1[1]);
             if (count($preguntaArr2)!=2) {
-                $preguntaMostrar['pregunta'] = 'Error 2';
-                $preguntaMostrar['s'] = 'ok';   
-                return $preguntaMostrar;
-                //return null;
+                return null;
             }
             $preguntaMostrar['pregunta'] = $preguntaArr2[0];
             $preguntaMostrar['s'] = $preguntaArr2[1];            
             return $preguntaMostrar;
-        } else {
-            $preguntaMostrar['pregunta'] = 'Error 3';
-                $preguntaMostrar['s'] = 'ok';  
-            return $preguntaMostrar;
+        } else {            
+            return null;
         }
     }
     
