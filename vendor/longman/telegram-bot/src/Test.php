@@ -185,6 +185,8 @@ class Test
             $preguntaMostrar['s'] = $preguntaArr2[1];            
             return $preguntaMostrar;
         } else {
+            $preguntaMostrar['pregunta'] = 'Error 3';
+                $preguntaMostrar['s'] = 'ok';  
             return null;
         }
     }
