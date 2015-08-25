@@ -187,7 +187,7 @@ class Test
         } else {
             $preguntaMostrar['pregunta'] = 'Error 3';
                 $preguntaMostrar['s'] = 'ok';  
-            return null;
+            return $preguntaMostrar;
         }
     }
     
