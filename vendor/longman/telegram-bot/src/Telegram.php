@@ -309,13 +309,7 @@ class Telegram
                 if (!is_null($datatest)) {
                     return Request::sendMessage($datatest); 
                 } else {                
-                    $data = array();
-                    $data['chat_id'] = $chat_id;
-                    $data['reply_to_message_id'] = $message_id;
-                    $data['text'] = 'Saludos mortal, tu nombre es ' . $message->getFrom()->getFirstName();
-                    $data['text'] .= "\n" . 'Todavia no entiendo lo que me estas diciendo pero algun dia lo hare.';
-                    $data['text'] .= "\n" . 'Tu mensaje es: ' . $text;
-                    return Request::sendMessage($data);  
+                    // do nothing
                 }
                 break;
 
