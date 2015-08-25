@@ -161,7 +161,7 @@ class Test
             //Output a line of the file until the end is reached
             while(!feof($file))
             {
-            $preguntas[] = fgets($file);
+                $preguntas[] = utf8_encode(fgets($file));
             }
             fclose($file);                        
             $preguntaNumero = rand(0, count($preguntas)-1);      
