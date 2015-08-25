@@ -1,0 +1,101 @@
+2015-08-24T11:45:35.103866+00:00 heroku[web.1]: Process exited with status 0
+2015-08-24T11:45:35.042122+00:00 heroku[web.1]: Starting process with command `vendor/bin/heroku-php-apache2`
+2015-08-24T11:45:37.300165+00:00 app[web.1]: Optimizing defaults for 1X dyno...
+2015-08-24T11:45:37.527232+00:00 app[web.1]: Starting php-fpm...
+2015-08-24T11:45:37.517850+00:00 app[web.1]: 4 processes at 128MB memory limit.
+2015-08-24T11:45:39.531025+00:00 app[web.1]: Starting httpd...
+2015-08-24T11:45:40.159453+00:00 heroku[web.1]: State changed from starting to up
+2015-08-24T11:45:45.571907+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=235f7075-2bab-446e-9fea-8011e1150c2c fwd="149.154.167.200" dyno=web.1 connect=0ms service=142ms status=500 bytes=209
+2015-08-24T11:45:45.572209+00:00 app[web.1]: 10.156.10.106 - - [24/Aug/2015:11:45:45 +0000] "POST /hook.php HTTP/1.1" 500 - "-" "-
+2015-08-24T11:45:45.550250+00:00 app[web.1]: [24-Aug-2015 11:45:45 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:45:45.571552+00:00 app[web.1]: [24-Aug-2015 11:45:45 UTC] PHP Fatal error:  Class 'Tests' not found in /app/vendor/longman/telegram-bot/src/Commands/TestCommand.php on line 42
+2015-08-24T11:45:47.786639+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=7536d5c1-3a23-494b-a59b-4fe33c910464 fwd="149.154.167.200" dyno=web.1 connect=1ms service=128ms status=500 bytes=209
+2015-08-24T11:45:47.782004+00:00 app[web.1]: [24-Aug-2015 11:45:47 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:45:47.786800+00:00 app[web.1]: 10.156.10.106 - - [24/Aug/2015:11:45:47 +0000] "POST /hook.php HTTP/1.1" 500 - "-" "-
+2015-08-24T11:45:47.786269+00:00 app[web.1]: [24-Aug-2015 11:45:47 UTC] PHP Fatal error:  Class 'Tests' not found in /app/vendor/longman/telegram-bot/src/Commands/TestCommand.php on line 42
+2015-08-24T11:45:51.994681+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=0efaf4a5-0c72-47b5-99ff-c3730a75da8a fwd="149.154.167.200" dyno=web.1 connect=0ms service=123ms status=500 bytes=209
+2015-08-24T11:45:51.990174+00:00 app[web.1]: [24-Aug-2015 11:45:51 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:45:51.994866+00:00 app[web.1]: 10.156.10.106 - - [24/Aug/2015:11:45:51 +0000] "POST /hook.php HTTP/1.1" 500 - "-" "-
+2015-08-24T11:45:51.994419+00:00 app[web.1]: [24-Aug-2015 11:45:51 UTC] PHP Fatal error:  Class 'Tests' not found in /app/vendor/longman/telegram-bot/src/Commands/TestCommand.php on line 42
+2015-08-24T11:46:00.210377+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=ddf87636-1065-43ff-9635-dd6be360b767 fwd="149.154.167.200" dyno=web.1 connect=0ms service=130ms status=500 bytes=209
+2015-08-24T11:46:00.210698+00:00 app[web.1]: 10.156.10.106 - - [24/Aug/2015:11:46:00 +0000] "POST /hook.php HTTP/1.1" 500 - "-" "-
+2015-08-24T11:46:00.205889+00:00 app[web.1]: [24-Aug-2015 11:46:00 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:46:00.210125+00:00 app[web.1]: [24-Aug-2015 11:46:00 UTC] PHP Fatal error:  Class 'Tests' not found in /app/vendor/longman/telegram-bot/src/Commands/TestCommand.php on line 42
+2015-08-24T11:46:07.991252+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=b4ec6bc4-f15a-4662-9ac6-adb8cb7bc6b0 fwd="149.154.167.200" dyno=web.1 connect=1ms service=108ms status=500 bytes=209
+2015-08-24T11:46:07.990015+00:00 app[web.1]: [24-Aug-2015 11:46:07 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:46:07.991251+00:00 app[web.1]: [24-Aug-2015 11:46:07 UTC] PHP Fatal error:  Class 'Tests' not found in /app/vendor/longman/telegram-bot/src/Commands/TestCommand.php on line 42
+2015-08-24T11:46:07.991524+00:00 app[web.1]: 10.156.10.106 - - [24/Aug/2015:11:46:07 +0000] "POST /hook.php HTTP/1.1" 500 - "-" "-
+2015-08-24T11:46:16.418587+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=21711d29-fe8c-4ad8-afbd-27a128dabad8 fwd="149.154.167.200" dyno=web.1 connect=1ms service=111ms status=500 bytes=209
+2015-08-24T11:46:16.418795+00:00 app[web.1]: [24-Aug-2015 11:46:16 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:46:16.420155+00:00 app[web.1]: 10.156.10.106 - - [24/Aug/2015:11:46:16 +0000] "POST /hook.php HTTP/1.1" 500 - "-" "-
+2015-08-24T11:46:16.419869+00:00 app[web.1]: [24-Aug-2015 11:46:16 UTC] PHP Fatal error:  Class 'Tests' not found in /app/vendor/longman/telegram-bot/src/Commands/TestCommand.php on line 42
+2015-08-24T11:46:48.623487+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=c63c644e-a889-447d-bd9d-4d1e7506b0ac fwd="149.154.167.200" dyno=web.1 connect=0ms service=120ms status=500 bytes=209
+2015-08-24T11:46:48.621980+00:00 app[web.1]: [24-Aug-2015 11:46:48 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:46:48.623876+00:00 app[web.1]: 10.156.10.106 - - [24/Aug/2015:11:46:48 +0000] "POST /hook.php HTTP/1.1" 500 - "-" "-
+2015-08-24T11:46:48.623542+00:00 app[web.1]: [24-Aug-2015 11:46:48 UTC] PHP Fatal error:  Class 'Tests' not found in /app/vendor/longman/telegram-bot/src/Commands/TestCommand.php on line 42
+2015-08-24T11:47:08.219361+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=3f43e995-d14c-40d9-a0e2-d60389cde450 fwd="149.154.167.200" dyno=web.1 connect=1ms service=130ms status=500 bytes=209
+2015-08-24T11:47:08.199838+00:00 app[web.1]: [24-Aug-2015 11:47:08 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:47:08.207194+00:00 app[web.1]: 10.156.10.106 - - [24/Aug/2015:11:47:08 +0000] "POST /hook.php HTTP/1.1" 500 - "-" "-
+2015-08-24T11:47:08.206890+00:00 app[web.1]: [24-Aug-2015 11:47:08 UTC] PHP Fatal error:  Class 'Tests' not found in /app/vendor/longman/telegram-bot/src/Commands/TestCommand.php on line 42
+2015-08-24T11:47:10.441363+00:00 heroku[slug-compiler]: Slug compilation started
+2015-08-24T11:47:10.441384+00:00 heroku[slug-compiler]: Slug compilation finished
+2015-08-24T11:47:10.402200+00:00 heroku[api]: Deploy 4b456d8 by bizkaitarra@gmail.com
+2015-08-24T11:47:10.402200+00:00 heroku[api]: Release v70 created by bizkaitarra@gmail.com
+2015-08-24T11:47:10.511373+00:00 heroku[web.1]: State changed from up to starting
+2015-08-24T11:47:13.946245+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-08-24T11:47:14.730076+00:00 app[web.1]: Going down, terminating child processes...
+2015-08-24T11:47:15.229284+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-08-24T11:47:15.895176+00:00 heroku[web.1]: Process exited with status 0
+2015-08-24T11:47:17.555030+00:00 heroku[web.1]: Starting process with command `vendor/bin/heroku-php-apache2`
+2015-08-24T11:47:20.514036+00:00 app[web.1]: Optimizing defaults for 1X dyno...
+2015-08-24T11:47:20.692326+00:00 app[web.1]: Starting php-fpm...
+2015-08-24T11:47:20.683713+00:00 app[web.1]: 4 processes at 128MB memory limit.
+2015-08-24T11:47:22.695569+00:00 app[web.1]: Starting httpd...
+2015-08-24T11:47:23.086239+00:00 heroku[web.1]: State changed from starting to up
+2015-08-24T11:47:32.131152+00:00 app[web.1]: [24-Aug-2015 11:47:32 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:47:32.613306+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=5d9ffc3b-f576-466c-910f-1d37b2d38e78 fwd="149.154.167.200" dyno=web.1 connect=2ms service=600ms status=200 bytes=190
+2015-08-24T11:47:32.613773+00:00 app[web.1]: 10.156.10.106 - - [24/Aug/2015:11:47:32 +0000] "POST /hook.php HTTP/1.1" 200 - "-" "-
+2015-08-24T11:47:35.833234+00:00 app[web.1]: [24-Aug-2015 11:47:35 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:47:36.337576+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=7294057a-4506-425f-9bd1-ccf8dfb1f6af fwd="149.154.167.200" dyno=web.1 connect=11ms service=581ms status=200 bytes=190
+2015-08-24T11:47:36.337965+00:00 app[web.1]: 10.156.10.106 - - [24/Aug/2015:11:47:35 +0000] "POST /hook.php HTTP/1.1" 200 - "-" "-
+2015-08-24T11:47:41.265069+00:00 app[web.1]: [24-Aug-2015 11:47:41 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:47:41.766466+00:00 app[web.1]: 10.37.200.146 - - [24/Aug/2015:11:47:41 +0000] "POST /hook.php HTTP/1.1" 200 - "-" "-
+2015-08-24T11:47:41.775309+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=b83047dc-6954-49ad-b9b8-8e3fbae4682d fwd="149.154.167.200" dyno=web.1 connect=1ms service=632ms status=200 bytes=190
+2015-08-24T11:47:48.833352+00:00 app[web.1]: [24-Aug-2015 11:47:48 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:47:49.348036+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=d4d87b19-0d60-48cd-a831-30abfcb6d0a1 fwd="149.154.167.200" dyno=web.1 connect=1ms service=638ms status=200 bytes=190
+2015-08-24T11:47:49.347861+00:00 app[web.1]: 10.146.15.54 - - [24/Aug/2015:11:47:48 +0000] "POST /hook.php HTTP/1.1" 200 - "-" "-
+2015-08-24T11:48:06.880279+00:00 app[web.1]: [24-Aug-2015 11:48:06 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:48:07.324913+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=e5cc43d6-42f9-4772-b533-4aa3b455b2c3 fwd="149.154.167.200" dyno=web.1 connect=2ms service=513ms status=200 bytes=190
+2015-08-24T11:48:07.325477+00:00 app[web.1]: 10.156.10.106 - - [24/Aug/2015:11:48:06 +0000] "POST /hook.php HTTP/1.1" 200 - "-" "-
+2015-08-24T11:48:08.387387+00:00 app[web.1]: [24-Aug-2015 11:48:08 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:48:08.856151+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=58daea49-6031-47cd-8915-2f4d86d43d9e fwd="149.154.167.200" dyno=web.1 connect=1ms service=550ms status=200 bytes=190
+2015-08-24T11:48:08.855390+00:00 app[web.1]: 10.37.200.146 - - [24/Aug/2015:11:48:08 +0000] "POST /hook.php HTTP/1.1" 200 - "-" "-
+2015-08-24T11:48:14.063129+00:00 app[web.1]: [24-Aug-2015 11:48:14 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:48:14.531107+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=3481f022-f82d-474f-9832-3c702dc8a262 fwd="149.154.167.200" dyno=web.1 connect=1ms service=553ms status=200 bytes=190
+2015-08-24T11:48:14.531227+00:00 app[web.1]: 10.146.15.54 - - [24/Aug/2015:11:48:13 +0000] "POST /hook.php HTTP/1.1" 200 - "-" "-
+2015-08-24T11:51:33.666179+00:00 app[web.1]: [24-Aug-2015 11:51:33 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:51:34.110451+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=170ddaee-ed6c-45ef-9da1-fa6c30f76197 fwd="149.154.167.200" dyno=web.1 connect=1ms service=561ms status=200 bytes=190
+2015-08-24T11:51:34.109981+00:00 app[web.1]: 10.167.199.204 - - [24/Aug/2015:11:51:33 +0000] "POST /hook.php HTTP/1.1" 200 - "-" "-
+2015-08-24T11:53:03.918436+00:00 app[web.1]: [24-Aug-2015 11:53:03 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:53:04.448429+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=30a992e2-1415-45a6-9c51-659baa93d0b0 fwd="149.154.167.200" dyno=web.1 connect=3ms service=635ms status=200 bytes=190
+2015-08-24T11:53:04.447909+00:00 app[web.1]: 10.149.84.53 - - [24/Aug/2015:11:53:03 +0000] "POST /hook.php HTTP/1.1" 200 - "-" "-
+2015-08-24T11:53:09.541987+00:00 app[web.1]: [24-Aug-2015 11:53:09 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:53:10.055407+00:00 heroku[api]: Deploy 71889cc by bizkaitarra@gmail.com
+2015-08-24T11:53:10.055407+00:00 heroku[api]: Release v71 created by bizkaitarra@gmail.com
+2015-08-24T11:53:10.115914+00:00 heroku[slug-compiler]: Slug compilation started
+2015-08-24T11:53:10.115937+00:00 heroku[slug-compiler]: Slug compilation finished
+2015-08-24T11:53:09.997707+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=f03b9c48-093c-44f6-b0b2-a7a3862186c3 fwd="149.154.167.200" dyno=web.1 connect=2ms service=535ms status=200 bytes=190
+2015-08-24T11:53:09.996745+00:00 app[web.1]: 10.149.84.53 - - [24/Aug/2015:11:53:09 +0000] "POST /hook.php HTTP/1.1" 200 - "-" "-
+2015-08-24T11:53:10.149665+00:00 heroku[web.1]: State changed from up to starting
+2015-08-24T11:53:13.050578+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-08-24T11:53:13.695627+00:00 app[web.1]: Going down, terminating child processes...
+2015-08-24T11:53:14.529517+00:00 heroku[web.1]: Process exited with status 0
+2015-08-24T11:53:18.342111+00:00 heroku[web.1]: Starting process with command `vendor/bin/heroku-php-apache2`
+2015-08-24T11:53:21.058435+00:00 app[web.1]: Optimizing defaults for 1X dyno...
+2015-08-24T11:53:21.308252+00:00 app[web.1]: Starting php-fpm...
+2015-08-24T11:53:21.287743+00:00 app[web.1]: 4 processes at 128MB memory limit.
+2015-08-24T11:53:23.325719+00:00 app[web.1]: Starting httpd...
+2015-08-24T11:53:23.425818+00:00 heroku[web.1]: State changed from starting to up
+2015-08-24T11:53:24.286311+00:00 app[web.1]: [24-Aug-2015 11:53:24 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+2015-08-24T11:53:24.952181+00:00 heroku[router]: at=info method=POST path="/hook.php" host=opedue.herokuapp.com request_id=c7924235-255a-4882-97af-df6270456659 fwd="149.154.167.200" dyno=web.1 connect=1ms service=665ms status=200 bytes=190
+2015-08-24T11:53:24.947704+00:00 app[web.1]: 10.149.84.53 - - [24/Aug/2015:11:53:24 +0000] "POST /hook.php HTTP/1.1" 200 - "-" "-

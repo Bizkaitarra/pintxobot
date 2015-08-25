@@ -1,0 +1,12 @@
+application: opedue
+version: 1
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /
+  script: hook.php
+- url: /set.php
+  script: set.php
+- url: /helloworld.php
+  script: helloworld.php
