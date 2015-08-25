@@ -2,8 +2,8 @@
 
 $loader = require __DIR__.'/vendor/autoload.php';
 
-$API_KEY = '139576478:AAF2mBzEzSPIhxtUGkZMFatDn0IRMUjkILc';
-$BOT_NAME = 'opedue';
+$API_KEY = '134756484:AAFXhc12rFLKWrnLDHCl-t1AU9d3-4oiOms';
+$BOT_NAME = 'pintxobot';
 
 try {
     // create Telegram API object    
