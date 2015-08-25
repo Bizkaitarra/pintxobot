@@ -50,9 +50,8 @@ class TrivialCommand extends Command
             $preguntaMostrar = $miTest->obtenerPreguntaAleatoria($temaElegido);
             if (!is_null($preguntaMostrar)) {              
                 $data['text'] .= "\n" .$preguntaMostrar['pregunta'];            
-                //Se crea un nuevo fichero de test        
-                $file = $chat_id.'.txt';        
-                file_put_contents($file, "respuestacorrecta=".$preguntaMostrar['s'].";temaElegido=".$temaElegido);
+                //Se crea un nuevo fichero de test
+                $miTest->crearFicheroTest($chat_id, "respuestacorrecta=".$preguntaMostrar['s'].";temaElegido=".$temaElegido);
             } else {
                 $data['text'] .= "\n" .'Ha ocurrido un error obteniendo las preguntas, seleccione otro tema.';  
             }       

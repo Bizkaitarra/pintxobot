@@ -147,6 +147,10 @@ class Test
                 }                                    
         } else {
             //No estamos en modo test.
+            $data = array();
+            $data['chat_id'] = $chat_id; 
+            $data['reply_to_message_id'] = $message_id;
+            $data['text'] = 'No existe el fichero de test ' . $message->getFrom()->getFirstName();
             return  null;
         }
         
@@ -185,12 +189,18 @@ class Test
         }
     }
     
-    public function esTest($idChat) {
-        if (file_exists($idChat.".txt")) {
-            return (filesize($idChat.".txt") > 0);
+    public function esTest($chat_id) {
+        $file = BASE_PATH."/".$chat_id.'.txt';        
+        if (file_exists($file)) {
+            return (filesize($file) > 0);
         } else {
             return false;
         }
+    }
+    
+    public function crearFicheroTest($chat_id, $test) {
+        $file = BASE_PATH."/".$chat_id.'.txt';        
+        file_put_contents($file, $test);
     }
 
     /**
