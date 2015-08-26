@@ -47,8 +47,10 @@ class TrivialCommand extends Command
         //Comprobar si existe el tema solicitado.
         if ($miTest->existeTema($temaElegido)) {
             //Se obtiene la primera de las preguntas.
+            $data['text'] .= "\n" ."Buscando pregunta...";
             $preguntaMostrar = $miTest->obtenerPreguntaAleatoria($temaElegido);
-            if (!is_null($preguntaMostrar)) {              
+            if (!is_null($preguntaMostrar)) {  
+                $data['text'] .= "\n" ."Pregunta encontrada, se muestra y se guarda el fichero...";
                 $data['text'] .= "\n" .$preguntaMostrar['pregunta'];            
                 //Se crea un nuevo fichero de test
                 $miTest->crearFicheroTest($chat_id, "respuestacorrecta=".$preguntaMostrar['s'].";temaElegido=".$temaElegido);
