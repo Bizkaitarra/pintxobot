@@ -164,9 +164,7 @@ class Test
             $preguntas = file($nombreFichero);
             //$preguntaNumero = rand(0, count($preguntas)-1);      
             
-            $preguntaMostrar['pregunta'] = $preguntas[0];
-            $preguntaMostrar['s'] = $preguntas[0];            
-            return $preguntaMostrar;
+            return array('pregunta' => $preguntas[0], 's' => $preguntas[0]);
             
             /*
             $separador1 = '©-«';
