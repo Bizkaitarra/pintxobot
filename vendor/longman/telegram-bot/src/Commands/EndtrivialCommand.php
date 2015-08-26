@@ -21,9 +21,9 @@ use Longman\TelegramBot\Entities\ReplyKeyboardHide;
 
 class EndtestCommand extends Command
 {
-    protected $name = 'endtest';
-    protected $description = 'Finaliza el test';
-    protected $usage = '/endtest';
+    protected $name = 'endtrivial';
+    protected $description = 'Finaliza el trivial';
+    protected $usage = '/endtrivial';
     protected $version = '1.0.0';
     protected $enabled = true;
     protected $public = true;
@@ -44,15 +44,6 @@ class EndtestCommand extends Command
         $file = $chat_id.'.txt';                        
         $puntero = fopen ($file, "w+");
         fclose($puntero);        
-        
-        
-        //Eliminando el teclado custom
-        $json = (
-            new ReplyKeyboardHide(            
-            )
-        )->toJSON();
-        #echo $json;
-        $data['reply_markup'] = $json;
         
         $result = Request::sendMessage($data);
         return $result;
