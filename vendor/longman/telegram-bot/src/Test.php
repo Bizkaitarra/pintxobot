@@ -162,10 +162,10 @@ class Test
         if (file_exists($nombreFichero)) {
             
             $preguntas = file($nombreFichero);
-            $preguntaNumero = rand(0, count($preguntas)-1);      
+            //$preguntaNumero = rand(0, count($preguntas)-1);      
             
-            $preguntaMostrar['pregunta'] = $preguntas[$preguntaNumero];
-            $preguntaMostrar['s'] = $preguntas[$preguntaNumero];            
+            $preguntaMostrar['pregunta'] = $preguntas[0];
+            $preguntaMostrar['s'] = $preguntas[0];            
             return $preguntaMostrar;
             
             /*
