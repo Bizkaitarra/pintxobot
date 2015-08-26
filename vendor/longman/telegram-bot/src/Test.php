@@ -170,7 +170,12 @@ class Test
             }
             fclose($file);                        
             $preguntaNumero = rand(0, count($preguntas)-1);      
-                       
+            
+            $preguntaMostrar['pregunta'] = $preguntas[$preguntaNumero];
+            $preguntaMostrar['s'] = $preguntas[$preguntaNumero];            
+            return $preguntaMostrar;
+            
+            /*
             $separador1 = '©-«';
             $preguntaArr1 = explode($separador1,$preguntas[$preguntaNumero]);
             
@@ -179,7 +184,8 @@ class Test
             
             $preguntaMostrar['pregunta'] = $preguntaArr2[0];
             $preguntaMostrar['s'] = $preguntaArr2[1];            
-            return $preguntaMostrar;
+            return $preguntaMostrar;             
+             */
         } else {       
             
             $preguntaMostrar['pregunta'] = 'No existe el fichero ' . BASE_PATH.'/'.$tema.'.txt';
