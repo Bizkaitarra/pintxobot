@@ -181,11 +181,11 @@ class Test
             $preguntaMostrar['s'] = $preguntaArr2[1];            
             return $preguntaMostrar;
         } else {       
-            /*
+            
             $preguntaMostrar['pregunta'] = 'No existe el fichero ' . BASE_PATH.'/'.$tema.'.txt';
             $preguntaMostrar['s'] = 'oki';            
             return $preguntaMostrar;
-             */
+             
             //return null;
         }
     }
