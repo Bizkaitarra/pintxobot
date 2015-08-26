@@ -39,7 +39,7 @@ class TrivialCommand extends Command
         $data = array();
         $data['chat_id'] = $chat_id;          
         $miTest = new Test();
-        $data['text'] = '';
+        $data['text'] = 'Comenzando el trivial...';
         
         $temaElegido = $message->getText(true);
         
