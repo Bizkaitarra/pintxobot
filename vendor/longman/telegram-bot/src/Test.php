@@ -161,23 +161,11 @@ class Test
         $nombreFichero = BASE_PATH.'/'.$tema.'.txt';
         if (file_exists($nombreFichero)) {
             
-            
-            /*
-            $file = fopen($nombreFichero, "r");
-            
-            //Output a line of the file until the end is reached
-            while(!feof($file))
-            {
-                $preguntas[] = fgets($file);
-            }
-             
-            fclose($file);                                     
-             */
             $preguntas = file($nombreFichero);
-            //$preguntaNumero = rand(0, count($preguntas)-1);      
+            $preguntaNumero = rand(0, count($preguntas)-1);      
             
-            $preguntaMostrar['pregunta'] = 'Esta es la pregunta cuya respuesta es ok el numero de preguntas es ' . count($preguntas) ;//$preguntas[$preguntaNumero];
-            $preguntaMostrar['s'] = 'ok';//$preguntas[$preguntaNumero];            
+            $preguntaMostrar['pregunta'] = $preguntas[$preguntaNumero];
+            $preguntaMostrar['s'] = $preguntas[$preguntaNumero];            
             return $preguntaMostrar;
             
             /*
