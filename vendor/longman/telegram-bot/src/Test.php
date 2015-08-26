@@ -174,7 +174,7 @@ class Test
             fclose($file);                                     
              */
             $preguntas = file($nombreFichero);
-            $preguntaNumero = rand(0, count($preguntas)-1);      
+            //$preguntaNumero = rand(0, count($preguntas)-1);      
             
             $preguntaMostrar['pregunta'] = 'Esta es la pregunta cuya respuesta es ok el numero de preguntas es ' . count($preguntas) ;//$preguntas[$preguntaNumero];
             $preguntaMostrar['s'] = 'ok';//$preguntas[$preguntaNumero];            
