@@ -162,9 +162,9 @@ class Test
         if (file_exists($nombreFichero)) {
             
             $preguntas = array();
-            
-            $file = fopen($nombreFichero, "r");
             /*
+            $file = fopen($nombreFichero, "r");
+            
             //Output a line of the file until the end is reached
             while(!feof($file))
             {
@@ -173,7 +173,7 @@ class Test
              
             fclose($file);                                     
              */
-            $preguntas = file($file);
+            $preguntas = file($nombreFichero);
             $preguntaNumero = rand(0, count($preguntas)-1);      
             
             $preguntaMostrar['pregunta'] = 'Esta es la pregunta cuya respuesta es ok el numero de preguntas es ' . count($preguntas) . ' siendo la primera de ellas ' . $preguntas[0];//$preguntas[$preguntaNumero];
