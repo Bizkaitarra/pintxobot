@@ -171,7 +171,7 @@ class Test
             fclose($file);                        
             $preguntaNumero = rand(0, count($preguntas)-1);      
             
-            $preguntaMostrar['pregunta'] = 'Esta es la pregunta cuya respuesta es ok';//$preguntas[$preguntaNumero];
+            $preguntaMostrar['pregunta'] = 'Esta es la pregunta cuya respuesta es ok el numero de preguntas es ' . count($preguntas) . ' siendo la primera de ellas ' . $preguntas[0];//$preguntas[$preguntaNumero];
             $preguntaMostrar['s'] = 'ok';//$preguntas[$preguntaNumero];            
             return $preguntaMostrar;
             
