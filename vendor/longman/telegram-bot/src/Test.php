@@ -172,7 +172,7 @@ class Test
             $preguntaNumero = rand(0, count($preguntas)-1);      
             
             $preguntaMostrar['pregunta'] = 'Esta es la pregunta cuya respuesta es ok';//$preguntas[$preguntaNumero];
-            $preguntaMostrar['s'] = 'ok';$preguntas[$preguntaNumero];            
+            $preguntaMostrar['s'] = 'ok';//$preguntas[$preguntaNumero];            
             return $preguntaMostrar;
             
             /*
