@@ -64,7 +64,7 @@ class Test
                 foreach ($arrValores as $variablevalor) {
                     $arrVariableAct = explode("=",$variablevalor);
                     $estado[$arrVariableAct[0]] = $arrVariableAct[1];
-                    if (strpos('p_', $arrVariableAct[0]) > 0) {
+                    if (strpos($arrVariableAct[0],'p_') > 0) {
                         //Es una variable de puntuacion
                         $puntuaciones[$arrVariableAct[0]] = $arrVariableAct[1];
                     }
