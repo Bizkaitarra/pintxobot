@@ -19,7 +19,7 @@ use Longman\TelegramBot\Entities\Update;
 use Longman\TelegramBot\Entities\ReplyKeyboardMarkup;
 use Longman\TelegramBot\Entities\ReplyKeyboardHide;
 
-class EndtestCommand extends Command
+class EndtrivialCommand extends Command
 {
     protected $name = 'endtrivial';
     protected $description = 'Finaliza el trivial';
