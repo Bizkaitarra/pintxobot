@@ -161,7 +161,7 @@ class Test
         $nombreFichero = BASE_PATH.'/'.$tema.'.txt';
         if (file_exists($nombreFichero)) {
             
-            $preguntas = array();
+            
             /*
             $file = fopen($nombreFichero, "r");
             
