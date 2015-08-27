@@ -108,12 +108,10 @@ class Test
                 //Se ordenan las puntuaciones de mayor a menor                
                 arsort($puntuaciones);
                 $data['text'] .= "\n" .'Puntuaciones:';
-                foreach ($puntuaciones as $usuario=>$puntuacion) {
-                    $data['text'] .= "\n" ."Usuario->".$usuario.', puntuacion->'.$puntuacion;
+                foreach ($puntuaciones as $usuario=>$puntuacion) {                    
                     $arrUsuario = explode("_",$usuario);
-                    $idusuario = $arrUsuario[0];
-                    $nombreUsuario = $estado['n_'.$idusuario];    
-                    $data['text'] .= "\n" ."Buscando ".'n_'.$idusuario.' en estado';
+                    $idusuario = $arrUsuario[1];
+                    $nombreUsuario = $estado['n_'.$idusuario];                        
                     $data['text'] .= "\n" .$nombreUsuario.':'.$puntuacion;
                 }
                 $data['text'] .= "\n" .'Resto de participantes sin puntos.';
@@ -148,12 +146,15 @@ class Test
                 return $data;
             } else {
                 //No es correcto, no se responde nada y se sigue con la pregunta actual  
+                
                 $data['text'] = '¡Incorrecto! Inténtalo otra vez ' . $message->getFrom()->getFirstName();
+                /*
                 $data['text'] .= "\n" ."Contenido del fichero = " . $current;
                 $data['text'] .= "\n" ."Comparando respuetacorrecta = " . strtoupper($respuestacorrecta) ." con respuesta enviada=". strtoupper($message->getText());
-                $data['text'] .= "\n" ."TRIM Y la variable comparacion es " . $comparacion;
-                
+                $data['text'] .= "\n" ."TRIM Y la variable comparacion es " . $comparacion;                                
+                 */
                 return $data;
+                
             }                                    
         } else {
             //No estamos en modo test.
