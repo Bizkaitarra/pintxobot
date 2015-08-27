@@ -931,7 +931,7 @@ class Test
                 //Hay que comprobar quien ha sido el que ha acertado para sumar sus puntos.
                 $message_id = $message->getMessageId();
                 $data['reply_to_message_id'] = $message_id;
-                $data['text'] = '¡Correcto! '.utf8_encode(VICTORY_HAND).' Punto para ' . $message->getFrom()->getFirstName();
+                $data['text'] = '¡Correcto! '.html_entity_decode(VICTORY_HAND).' Punto para ' . $message->getFrom()->getFirstName();
                 //Suma de puntos
                 $idUsuarioAcierto = $message->getFrom()->getId();
                 if (!isset($estado['p_'.$idUsuarioAcierto])) {
