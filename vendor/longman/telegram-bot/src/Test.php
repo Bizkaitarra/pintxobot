@@ -142,8 +142,9 @@ class Test
                 }
                 return $data;
                 } else {
-                    //No es correcto, no se responde nada y se sigue con la pregunta actual     
-                    return null;
+                    //No es correcto, no se responde nada y se sigue con la pregunta actual  
+                    $data['text'] = '¡Incorrecto! Inténtalo otra vez ' . $message->getFrom()->getFirstName();
+                    return $data;
                 }                                    
         } else {
             //No estamos en modo test.
@@ -168,29 +169,12 @@ class Test
             $separador1 = '©-«';
             $preguntaArr1 = explode($separador1,$pregunta);
             $separador2 = '*';
-            $preguntaArr2 = explode($separador2,$preguntaArr1[1]);
-            
-            return array('pregunta' => $preguntaArr2[0], 's' => $preguntaArr2[1]);
-            //return array('pregunta' => 'mi pregunta', 's' => 'ok');
-            
-            /*
-            $separador1 = '©-«';
-            $preguntaArr1 = explode($separador1,$preguntas[$preguntaNumero]);
-            
-            $separador2 = '*';
-            $preguntaArr2 = explode($separador2,$preguntaArr1[1]);
-            
-            $preguntaMostrar['pregunta'] = $preguntaArr2[0];
-            $preguntaMostrar['s'] = $preguntaArr2[1];            
-            return $preguntaMostrar;             
-             */
-        } else {       
-            
-            $preguntaMostrar['pregunta'] = 'No existe el fichero ' . BASE_PATH.'/'.$tema.'.txt';
+            $preguntaArr2 = explode($separador2,$preguntaArr1[1]);            
+            return array('pregunta' => $preguntaArr2[0], 's' => $preguntaArr2[1]);            
+        } else {                   
+            $preguntaMostrar['pregunta'] = 'No existe el fichero de preguntas ' . BASE_PATH.'/'.$tema.'.txt';
             $preguntaMostrar['s'] = 'oki';            
-            return $preguntaMostrar;
-             
-            //return null;
+            return null;            
         }
     }
     
