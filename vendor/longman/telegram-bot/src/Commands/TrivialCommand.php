@@ -39,25 +39,25 @@ class TrivialCommand extends Command
         $data = array();
         $data['chat_id'] = $chat_id;          
         $miTest = new Test();
-        $data['text'] = 'Comenzando el trivial...';
-        
+        //$data['text'] = 'Comenzando el trivial...';
+        $data['text'] = '';
         $temaElegido = $message->getText(true);
         
         
         //Comprobar si existe el tema solicitado.
         if ($miTest->existeTema($temaElegido)) {
             //Se obtiene la primera de las preguntas.
-            $data['text'] .= "\n" ."Buscando pregunta...";
+            //$data['text'] .= "\n" ."Buscando pregunta...";
             $preguntaMostrar = $miTest->obtenerPreguntaAleatoria($temaElegido);
             if (!is_null($preguntaMostrar)) {  
-                $data['text'] .= "\n" ."Pregunta encontrada, se muestra y se guarda el fichero...";
+                //$data['text'] .= "\n" ."Pregunta encontrada, se muestra y se guarda el fichero...";
                 $data['text'] .= "\n" .$preguntaMostrar['pregunta'];            
                 //Se crea un nuevo fichero de test
                 $miTest->crearFicheroTest($chat_id, "respuestacorrecta=".$preguntaMostrar['s'].";temaElegido=".$temaElegido);
-                $data['text'] .= "\n" ."Fichero creado, se debería de haber mostrado la pregunta...";
-                $data['text'] .= "\n" ."Contenido del fichero: respuestacorrecta=".$preguntaMostrar['s'].";temaElegido=".$temaElegido;
+                //$data['text'] .= "\n" ."Fichero creado, se debería de haber mostrado la pregunta...";
+                //$data['text'] .= "\n" ."Contenido del fichero: respuestacorrecta=".$preguntaMostrar['s'].";temaElegido=".$temaElegido;
                 $contenido = $miTest->obtenerContenidoFichero($chat_id);
-                $data['text'] .= "\n" ."Y el contenido real es: " . $contenido;
+                //$data['text'] .= "\n" ."Y el contenido real es: " . $contenido;
             } else {
                 $data['text'] .= "\n" .'Ha ocurrido un error obteniendo las preguntas, seleccione otro tema.';  
             }       
