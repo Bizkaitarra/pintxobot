@@ -143,7 +143,7 @@ class Test
                 return $data;
                 } else {
                     //No es correcto, no se responde nada y se sigue con la pregunta actual  
-                    $data['text'] = '¡Incorrecto! Inténtalo otra vez ' . $message->getFrom()->getFirstName();
+                    $data['text'] = 'La respuesta correcta es '.$respuestacorrecta .'¡Incorrecto! Inténtalo otra vez ' . $message->getFrom()->getFirstName();
                     return $data;
                 }                                    
         } else {
