@@ -109,6 +109,7 @@ class Test
                 arsort($puntuaciones);
                 $data['text'] .= "\n" .'Puntuaciones:';
                 foreach ($puntuaciones as $usuario=>$puntuacion) {
+                    $data['text'] .= "\n" ."Usuario->".$usuario.', puntuacion->'.$puntuacion;
                     $arrUsuario = explode("_",$usuario);
                     $idusuario = $arrUsuario[0];
                     $nombreUsuario = $estado['n_'.$idusuario];                    
