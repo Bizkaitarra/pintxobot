@@ -58,7 +58,7 @@ class Test
             $puntuaciones = array();
             if (file_exists($file)) {
                 //Se obtiene el contenido, el estado actual.
-                $current = file_get_contents($file);
+                $current = $this->obtenerContenidoFichero($chat_id);
                 $arrValores = explode(";",$current);
 
                 foreach ($arrValores as $variablevalor) {
@@ -190,6 +190,16 @@ class Test
     public function crearFicheroTest($chat_id, $test) {
         $file = BASE_PATH."/".$chat_id.'.txt';        
         file_put_contents($file, $test);
+    }
+    
+    public function obtenerContenidoFichero ($chat_id) {
+        $file = BASE_PATH."/".$chat_id . ".txt";       
+        if (file_exists($file)) {
+                //Se obtiene el contenido, el estado actual.
+                return file_get_contents($file);
+        } else {
+            return '';
+        }
     }
 
     /**
