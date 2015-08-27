@@ -97,7 +97,7 @@ class Test
                     $estado['p_'.$idUsuarioAcierto] = 0;
                 }
                 $estado['p_'.$idUsuarioAcierto]++;
-                $puntuaciones[$arrVariableAct[0]] = $arrVariableAct[1];
+                $puntuaciones['p_'.$idUsuarioAcierto] = $estado['p_'.$idUsuarioAcierto];
                 
                 //Para poder traducir los ids de usuario a los nombres hay que guardarlos en estado.
                 //Se va guardando cada id-nombre de cada usuario según acierta preguntas.
