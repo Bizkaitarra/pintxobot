@@ -85,7 +85,8 @@ class Test
             
             
             //Comprobar si la respueta es correcta
-            if ((string)strtoupper($respuestacorrecta) == (string)strtoupper($message->getText())) {
+            $comparacion = strcmp((string)strtoupper($respuestacorrecta) ,(string)strtoupper($message->getText()));
+            if ($comparacion == 0) {
                 //Hay que comprobar quien ha sido el que ha acertado para sumar sus puntos.
                 $message_id = $message->getMessageId();
                 $data['reply_to_message_id'] = $message_id;
@@ -146,6 +147,8 @@ class Test
                 $data['text'] = '¡Incorrecto! Inténtalo otra vez ' . $message->getFrom()->getFirstName();
                 $data['text'] .= "\n" ."Contenido del fichero = " . $current;
                 $data['text'] .= "\n" ."Comparando respuetacorrecta = " . strtoupper($respuestacorrecta) ." con respuesta enviada=". strtoupper($message->getText());
+                $data['text'] .= "\n" ."Y la variable comparacion es " . $comparacion;
+                
                 return $data;
             }                                    
         } else {
