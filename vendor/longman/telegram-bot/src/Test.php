@@ -141,11 +141,12 @@ class Test
                     $data['text'] .= "\n" .'No se puede acceder a las preguntas para pregunta la siguiente.';  
                 }
                 return $data;
-                } else {
-                    //No es correcto, no se responde nada y se sigue con la pregunta actual  
-                    $data['text'] = 'La respuesta correcta es '.$respuestacorrecta .', tu respuesta es ' . $message->getText() . ' y el contenido del fichero de estado es: '  .$current. '¡Incorrecto! Inténtalo otra vez ' . $message->getFrom()->getFirstName();
-                    return $data;
-                }                                    
+            } else {
+                //No es correcto, no se responde nada y se sigue con la pregunta actual  
+                $data['text'] = 'La respuesta correcta es '.$respuestacorrecta .', tu respuesta es ' . $message->getText() . ' y el contenido del fichero de estado es: '  .$current. '¡Incorrecto! Inténtalo otra vez ' . $message->getFrom()->getFirstName();
+                $data['text'] .= "\n" ."Comparando respuetacorrecta = " . strtoupper($respuestacorrecta) ." con respuesta enviada=". strtoupper($message->getText());
+                return $data;
+            }                                    
         } else {
             //No estamos en modo test.
             $data = array();
