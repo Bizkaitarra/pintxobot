@@ -905,7 +905,7 @@ class Test
             foreach ($arrValores as $variablevalor) {
                 $arrVariableAct = explode("=",$variablevalor);
                 $estado[$arrVariableAct[0]] = $arrVariableAct[1];
-                if (strpos($arrVariableAct[0],'p_') > 0) {
+                if (strpos($arrVariableAct[0],'p_') !== false) {
                     //Es una variable de puntuacion
                     $puntuaciones[$arrVariableAct[0]] = $arrVariableAct[1];
                 }
@@ -987,14 +987,14 @@ class Test
                 return $data;
             } else {
                 //No es correcto, no se responde nada y se sigue con la pregunta actual  
-                
-                $data['text'] = '¡Incorrecto! Inténtalo otra vez ' . $message->getFrom()->getFirstName();
+                return null;
+                //$data['text'] = '¡Incorrecto! Inténtalo otra vez ' . $message->getFrom()->getFirstName();
                 /*
                 $data['text'] .= "\n" ."Contenido del fichero = " . $current;
                 $data['text'] .= "\n" ."Comparando respuetacorrecta = " . strtoupper($respuestacorrecta) ." con respuesta enviada=". strtoupper($message->getText());
                 $data['text'] .= "\n" ."TRIM Y la variable comparacion es " . $comparacion;                                
                  */
-                return $data;
+                //return $data;
                 
             }                                    
         } else {
@@ -1002,7 +1002,7 @@ class Test
             $data = array();
             $data['chat_id'] = $chat_id; 
             $data['reply_to_message_id'] = $message_id;
-            $data['text'] = 'No existe el fichero de test ' . $file;
+            $data['text'] = 'El trivial no se ha iniciado. Para iniciar el trivial escribe /trivial NOMBRETEMA';
             return  $data;
         }
         
