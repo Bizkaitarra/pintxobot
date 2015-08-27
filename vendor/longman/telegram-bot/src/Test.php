@@ -90,7 +90,7 @@ class Test
                 //Hay que comprobar quien ha sido el que ha acertado para sumar sus puntos.
                 $message_id = $message->getMessageId();
                 $data['reply_to_message_id'] = $message_id;
-                $data['text'] = '¡Correcto! Punto para ' . $message->getFrom()->getFirstName();
+                $data['text'] = '¡Correcto! :+1: Punto para ' . $message->getFrom()->getFirstName();
                 //Suma de puntos
                 $idUsuarioAcierto = $message->getFrom()->getId();
                 if (!isset($estado['p_'.$idUsuarioAcierto])) {
@@ -138,7 +138,7 @@ class Test
                         $estadotxt .=$variable."=".$valor;
                     }                    
                     $this->crearFicheroTest($chat_id, $estadotxt);
-                    $data['text'] .= "\n" .'Guardado en fichero : ' . $estadotxt;
+                    //$data['text'] .= "\n" .'Guardado en fichero : ' . $estadotxt;
                     
                 } else {
                     $data['text'] .= "\n" .'No se puede acceder a las preguntas para pregunta la siguiente.';  
