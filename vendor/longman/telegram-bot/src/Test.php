@@ -136,8 +136,10 @@ class Test
                             $estadotxt .=";";
                         }
                         $estadotxt .=$variable."=".$valor;
-                    }
-                    file_put_contents($file, $estadotxt);
+                    }                    
+                    $this->crearFicheroTest($chat_id, $estadotxt);
+                    $data['text'] .= "\n" .'Guardado en fichero : ' . $estadotxt;
+                    
                 } else {
                     $data['text'] .= "\n" .'No se puede acceder a las preguntas para pregunta la siguiente.';  
                 }
