@@ -112,7 +112,8 @@ class Test
                     $data['text'] .= "\n" ."Usuario->".$usuario.', puntuacion->'.$puntuacion;
                     $arrUsuario = explode("_",$usuario);
                     $idusuario = $arrUsuario[0];
-                    $nombreUsuario = $estado['n_'.$idusuario];                    
+                    $nombreUsuario = $estado['n_'.$idusuario];    
+                    $data['text'] .= "\n" ."Buscando ".'n_'.$idusuario.' en estado';
                     $data['text'] .= "\n" .$nombreUsuario.':'.$puntuacion;
                 }
                 $data['text'] .= "\n" .'Resto de participantes sin puntos.';
