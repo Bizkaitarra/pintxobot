@@ -56,20 +56,20 @@ class Test
             //Estamos en modo test, hay que leer el estado actual.
             $estado = array();
             $puntuaciones = array();
-            if (file_exists($file)) {
-                //Se obtiene el contenido, el estado actual.
-                $current = $this->obtenerContenidoFichero($chat_id);
-                $arrValores = explode(";",$current);
+            
+            //Se obtiene el contenido, el estado actual.
+            $current = $this->obtenerContenidoFichero($chat_id);
+            $arrValores = explode(";",$current);
 
-                foreach ($arrValores as $variablevalor) {
-                    $arrVariableAct = explode("=",$variablevalor);
-                    $estado[$arrVariableAct[0]] = $arrVariableAct[1];
-                    if (strpos($arrVariableAct[0],'p_') > 0) {
-                        //Es una variable de puntuacion
-                        $puntuaciones[$arrVariableAct[0]] = $arrVariableAct[1];
-                    }
+            foreach ($arrValores as $variablevalor) {
+                $arrVariableAct = explode("=",$variablevalor);
+                $estado[$arrVariableAct[0]] = $arrVariableAct[1];
+                if (strpos($arrVariableAct[0],'p_') > 0) {
+                    //Es una variable de puntuacion
+                    $puntuaciones[$arrVariableAct[0]] = $arrVariableAct[1];
                 }
             }
+            
             
             if (isset($estado['respuestacorrecta'])) {
                 $respuestacorrecta = $estado['respuestacorrecta'];
@@ -143,7 +143,8 @@ class Test
                 return $data;
             } else {
                 //No es correcto, no se responde nada y se sigue con la pregunta actual  
-                $data['text'] = 'La respuesta correcta es '.$respuestacorrecta .', tu respuesta es ' . $message->getText() . ' y el contenido del fichero de estado es: '  .$current. '¡Incorrecto! Inténtalo otra vez ' . $message->getFrom()->getFirstName();
+                $data['text'] = '¡Incorrecto! Inténtalo otra vez ' . $message->getFrom()->getFirstName();
+                $data['text'] .= "\n" ."Contenido del fichero = " . $current;
                 $data['text'] .= "\n" ."Comparando respuetacorrecta = " . strtoupper($respuestacorrecta) ." con respuesta enviada=". strtoupper($message->getText());
                 return $data;
             }                                    
