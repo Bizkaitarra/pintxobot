@@ -162,9 +162,15 @@ class Test
         if (file_exists($nombreFichero)) {
             
             $preguntas = file($nombreFichero);
-            //$preguntaNumero = rand(0, count($preguntas)-1);      
+            $preguntaNumero = rand(0, count($preguntas)-1);      
             
-            return array('pregunta' => utf8_encode($preguntas[0]), 's' => utf8_encode($preguntas[0]));
+            $pregunta = utf8_encode($preguntas[$preguntaNumero]);
+            $separador1 = '©-«';
+            $preguntaArr1 = explode($separador1,$pregunta);
+            $separador2 = '*';
+            $preguntaArr2 = explode($separador2,$preguntaArr1[1]);
+            
+            return array('pregunta' => $preguntaArr2[0], 's' => $preguntaArr2[1]);
             //return array('pregunta' => 'mi pregunta', 's' => 'ok');
             
             /*
