@@ -166,7 +166,7 @@ class Test
             $preguntaNumero = rand(0, count($preguntas)-1);      
             
             $pregunta = utf8_encode($preguntas[$preguntaNumero]);
-            $separador1 = '-«';
+            $separador1 = '«';
             $preguntaArr1 = explode($separador1,$pregunta);
             $separador2 = '*';
             $preguntaArr2 = explode($separador2,$preguntaArr1[1]);            
