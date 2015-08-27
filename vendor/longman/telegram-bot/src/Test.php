@@ -85,7 +85,7 @@ class Test
             
             
             //Comprobar si la respueta es correcta
-            if (strtoupper($respuestacorrecta) == strtoupper($message->getText())) {
+            if ((string)strtoupper($respuestacorrecta) == (string)strtoupper($message->getText())) {
                 //Hay que comprobar quien ha sido el que ha acertado para sumar sus puntos.
                 $message_id = $message->getMessageId();
                 $data['reply_to_message_id'] = $message_id;
