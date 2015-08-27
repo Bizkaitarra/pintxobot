@@ -170,7 +170,7 @@ class Test
             $preguntaArr1 = explode($separador1,$pregunta);
             $separador2 = '*';
             $preguntaArr2 = explode($separador2,$preguntaArr1[1]);            
-            return array('pregunta' => $preguntaArr2[0], 's' => $preguntaArr2[1]);            
+            return array('pregunta' => "Nº " . $preguntaNumero . " - " . $preguntaArr2[0], 's' => $preguntaArr2[1]);            
         } else {                   
             $preguntaMostrar['pregunta'] = 'No existe el fichero de preguntas ' . BASE_PATH.'/'.$tema.'.txt';
             $preguntaMostrar['s'] = 'oki';            
