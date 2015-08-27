@@ -55,6 +55,7 @@ class TrivialCommand extends Command
                 //Se crea un nuevo fichero de test
                 $miTest->crearFicheroTest($chat_id, "respuestacorrecta=".$preguntaMostrar['s'].";temaElegido=".$temaElegido);
                 $data['text'] .= "\n" ."Fichero creado, se debería de haber mostrado la pregunta...";
+                $data['text'] .= "\n" ."Contenido del fichero: respuestacorrecta=".$preguntaMostrar['s'].";temaElegido=".$temaElegido;
             } else {
                 $data['text'] .= "\n" .'Ha ocurrido un error obteniendo las preguntas, seleccione otro tema.';  
             }       
